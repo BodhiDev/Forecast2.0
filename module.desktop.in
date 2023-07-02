@@ -2,6 +2,7 @@
 Encoding=UTF-8
 Type=Link
 Name=Forecasts
+Name[be]=Прагноз надвор'я
 Name[ca]=Previsions
 Name[cs]=Předpověď počasí
 Name[de]=Vorhersagen
@@ -22,6 +23,7 @@ Name[sr]=Прогнозе
 Name[sk]=Predpoveď počasia
 Name[tr]=Hava Tahminleri
 Comment=The forecasts gadget will display the current weather conditions plus a few days forecast.
+Comment[be]=Гаджэт паказвае цяперашняе надвор'е ды прагноз на некалькі дзён.
 Comment[ca]=El giny de previsions mostrarà les condicions actuals del temps i el pronòstic d'uns quants dies.
 Comment[cs]=Zobrazuje aktuální počasí plus předpověď na několik dní.
 Comment[el]=Το συστατικό προβλέψεων θα εμφανίσει τις τρέχουσες καιρικές συνθήκες και των επόμενων ημερών.
