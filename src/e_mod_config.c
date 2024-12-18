@@ -95,15 +95,14 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
 {
    Evas_Object *o, *of, *ob;
    E_Radio_Group *dg;
-   
+
    o = e_widget_list_add(evas, 0, 0);
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
    ob = e_widget_label_add(evas, D_("Poll Time"));
    e_widget_framelist_object_append(of, ob);
    ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f minutes"), 15.0, 60.0, 1.0, 0,&(cfdata->poll_time), NULL, 40);
    e_widget_framelist_object_append(of, ob);
-   
-   
+
    ob = e_widget_label_add(evas, D_("Forecasts days"));
    e_widget_framelist_object_append(of, ob);
    ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f days"), 2.0, 3.0, 1.0, 0, &(cfdata->days), NULL, 40);
@@ -124,29 +123,29 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    of = e_widget_frametable_add(evas, D_("Weather location"), 0);
-   
+
    ob = e_widget_label_add(evas, D_("City name (empty = local) "));
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
    ob = e_widget_entry_add(evas, &cfdata->code, NULL, NULL, NULL);
    e_widget_size_min_set(ob, 120, 28);
    e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 0, 1, 0);
-   
+
    ob = e_widget_label_add(evas, D_("Custom location label "));
    e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 0, 1, 0);
    ob = e_widget_entry_add(evas, &cfdata->label, NULL, NULL, NULL);
    e_widget_size_min_set(ob, 120, 28);
    e_widget_frametable_object_append(of, ob, 1, 2, 1, 1, 1, 0, 1, 0);
-   
+
    e_widget_list_object_append(o, of, 1, 1, 0.5);
-   
+
    of = e_widget_frametable_add(evas, D_("Language support"), 0);
-   
+
    ob = e_widget_label_add(evas, D_("Language code (e.g. sk)    "));
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
    ob = e_widget_entry_add(evas, &cfdata->lang, NULL, NULL, NULL);
    e_widget_size_min_set(ob, 40, 28);
    e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 0, 1, 0);
-   
+
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    return o;
@@ -156,14 +155,14 @@ static int
 _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
 {
    Config_Item *ci;
-   char *t, *l, *k;
+   char *t = "", *l = "", *k = "";
 
    ci = cfd->data;
 
    ci->degrees = cfdata->degrees;
    ci->poll_time = (cfdata->poll_time * 60.0);
    ci->days = cfdata->days;
-   
+
    if (ci->code)
      eina_stringshare_del(ci->code);
 
@@ -177,10 +176,10 @@ _basic_apply_data(E_Config_Dialog *cfd, E_Config_Dialog_Data *cfdata)
    *l = tolower(*l);
    ci->lang = eina_stringshare_add(l);
 
-   if(cfdata->label)
+   if (cfdata->label)
      k = strdup(cfdata->label);
    ci->label = eina_stringshare_add(k);
-   
+
    free(t);
    free(l);
    free(k);

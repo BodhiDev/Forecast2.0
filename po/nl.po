@@ -1,13 +1,13 @@
-# Dutch translation for Forecast
-# This file is distributed under the same license as the Forecast package.
+# Dutch translation for the Forecasts module.
+# This file is distributed under the same license as the forecasts package.
 # Heimen Stoffels <vistausss@gmail.com>, 2009.
 # Pjotr <pjotrvertaalt@gmail.com>, 2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2020-06-30 15:26+0200\n"
+"Project-Id-Version: forecasts\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-16 15:31-0500\n"
 "PO-Revision-Date: 2011-09-04 16:01+0100\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -33,113 +33,113 @@ msgstr "Tussenpoze voor meten"
 msgid "%2.0f minutes"
 msgstr "%2.0f minuten"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:106
 msgid "Forecasts days"
 msgstr "Te voorspellen dagen"
 
-#: src/e_mod_config.c:109
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f days"
 msgstr "%2.0f dagen"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:111
 msgid "Show Description"
 msgstr "Toon beschrijving"
 
-#: src/e_mod_config.c:114
+#: src/e_mod_config.c:113
 msgid "Popup on mouse over"
 msgstr "Opduikmenu bij muispijl erover"
 
-#: src/e_mod_config.c:118
+#: src/e_mod_config.c:117
 msgid "Unit Settings"
 msgstr "Eenheidinstellingen"
 
-#: src/e_mod_config.c:120
+#: src/e_mod_config.c:119
 msgid "Metric"
 msgstr "Metrisch"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:121
 msgid "English"
 msgstr "Engels"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:125
 msgid "Weather location"
 msgstr "Weerlocatie"
 
-#: src/e_mod_config.c:128
+#: src/e_mod_config.c:127
 msgid "City name (empty = local) "
 msgstr "Stadsnaam (leeg = plaatselijk)"
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:133
 msgid "Custom location label "
 msgstr "Aangepast locatie-etiket"
 
-#: src/e_mod_config.c:142
+#: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Taalondersteuning"
 
-#: src/e_mod_config.c:144
+#: src/e_mod_config.c:143
 msgid "Language code (e.g. sk)    "
 msgstr "Taalcode (bijv. nl)"
 
-#: src/e_mod_main.c:270
+#: src/e_mod_main.c:168
 msgid "Forecasts"
 msgstr "Weersvoorspellingen"
 
-#: src/e_mod_main.c:312
+#: src/e_mod_main.c:210
 msgid "Settings"
 msgstr "Instellingen"
 
-#: src/e_mod_main.c:1212
+#: src/e_mod_main.c:755 src/e_mod_main.c:757
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: Huidige omstandigheden"
 
-#: src/e_mod_main.c:1226
+#: src/e_mod_main.c:771
 msgid "Feels Like:"
 msgstr "Voelt aan als:"
 
-#: src/e_mod_main.c:1232
+#: src/e_mod_main.c:777
 msgid "Wind Chill:"
 msgstr "Gevoelstemperatuur:"
 
-#: src/e_mod_main.c:1238
+#: src/e_mod_main.c:783
 msgid "Wind Speed:"
 msgstr "Windsnelheid:"
 
-#: src/e_mod_main.c:1244
+#: src/e_mod_main.c:789
 msgid "Humidity:"
 msgstr "Luchtvochtigheid:"
 
-#: src/e_mod_main.c:1250
+#: src/e_mod_main.c:795
 msgid "Precipitation:"
 msgstr "Neerslag:"
 
-#: src/e_mod_main.c:1256
+#: src/e_mod_main.c:801
 msgid "Visibility:"
 msgstr "Zichtbaarheid"
 
-#: src/e_mod_main.c:1262
+#: src/e_mod_main.c:807
 msgid "Pressure:"
 msgstr "Luchtdruk:"
 
-#: src/e_mod_main.c:1271
+#: src/e_mod_main.c:816
 msgid "Sunrise / Sunset: "
 msgstr "Zonsopgang / Zonsondergang: "
 
-#: src/e_mod_main.c:1289
+#: src/e_mod_main.c:843
 msgid "Today"
 msgstr "Vandaag"
 
-#: src/e_mod_main.c:1291
+#: src/e_mod_main.c:845
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: src/e_mod_main.c:1299
+#: src/e_mod_main.c:854
 msgid "High"
 msgstr "Hoog"
 
-#: src/e_mod_main.c:1310
+#: src/e_mod_main.c:865
 msgid "Low"
 msgstr "Laag"
 

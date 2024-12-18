@@ -2,16 +2,18 @@
 #define FC_COMMON_H
 
 #include <e.h>
+#include "config.h"
 #include "e_mod_config.h"
 
-#ifdef ENABLE_NLS
+#ifdef HAVE_GETTEXT
 # include <libintl.h>
-# define D_(string) dgettext(PACKAGE, string)
+# define D_(string) dgettext(LOCALEDOMAIN, string)
 #else
 # define bindtextdomain(domain,dir)
 # define bind_textdomain_codeset(domain,codeset)
 # define D_(string) (string)
 #endif
+#define N_(string) (string)
 
 /* EINA_LOG support macros and global */
 extern int _e_forecast_log_dom;

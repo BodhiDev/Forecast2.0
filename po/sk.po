@@ -1,12 +1,12 @@
-# Slovak translation for enlightenment
-# This file is distributed under the same license as the enlightenment package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+# Slovak translation for the Forecasts module.
+# This file is distributed under the same license as the forecasts package.
+# Stefan Uram <thewaiter@centrum.sk>, 2009
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: enlightenment\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2020-06-30 15:26+0200\n"
+"Project-Id-Version: forecasts\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-16 15:31-0500\n"
 "PO-Revision-Date: 2009-03-24 15:30+0000\n"
 "Last-Translator: Stefan Uram <thewaiter@centrum.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -32,112 +32,112 @@ msgstr "Čas obnovy"
 msgid "%2.0f minutes"
 msgstr "%2.0f minút"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:106
 msgid "Forecasts days"
 msgstr "Počet dní predpovede"
 
-#: src/e_mod_config.c:109
+#: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f days"
 msgstr "%2.0f dni"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:111
 msgid "Show Description"
 msgstr "Zobraziť popis"
 
-#: src/e_mod_config.c:114
+#: src/e_mod_config.c:113
 msgid "Popup on mouse over"
 msgstr "Vyskakovacie okno pri prechode myšou"
 
-#: src/e_mod_config.c:118
+#: src/e_mod_config.c:117
 msgid "Unit Settings"
 msgstr "Nastavenie jednotiek"
 
-#: src/e_mod_config.c:120
+#: src/e_mod_config.c:119
 msgid "Metric"
 msgstr "Metrické"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:121
 msgid "English"
 msgstr "Britské"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:125
 msgid "Weather location"
 msgstr "Miesto predpovede"
 
-#: src/e_mod_config.c:128
+#: src/e_mod_config.c:127
 msgid "City name (empty = local) "
 msgstr "Miesto (prázdne = lokálne) "
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:133
 msgid "Custom location label "
 msgstr "Voliteľný názov miesta "
 
-#: src/e_mod_config.c:142
+#: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Jazyková podpora"
 
-#: src/e_mod_config.c:144
+#: src/e_mod_config.c:143
 msgid "Language code (e.g. sk)    "
 msgstr "Kód jazyka (napr. sk)    "
 
-#: src/e_mod_main.c:270
+#: src/e_mod_main.c:168
 msgid "Forecasts"
 msgstr "Predpoveď"
 
-#: src/e_mod_main.c:312
+#: src/e_mod_main.c:210
 msgid "Settings"
 msgstr "Nastavenie"
 
-#: src/e_mod_main.c:1212
+#: src/e_mod_main.c:755 src/e_mod_main.c:757
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: Aktuálne počasie"
 
-#: src/e_mod_main.c:1226
+#: src/e_mod_main.c:771
 msgid "Feels Like:"
 msgstr "Pocitová teplota:"
 
-#: src/e_mod_main.c:1232
+#: src/e_mod_main.c:777
 msgid "Wind Chill:"
 msgstr "Chladnosť vetra:"
 
-#: src/e_mod_main.c:1238
+#: src/e_mod_main.c:783
 msgid "Wind Speed:"
 msgstr "Rýchlosť vetra:"
 
-#: src/e_mod_main.c:1244
+#: src/e_mod_main.c:789
 msgid "Humidity:"
 msgstr "Vlhkosť:"
 
-#: src/e_mod_main.c:1250
+#: src/e_mod_main.c:795
 msgid "Precipitation:"
 msgstr "Úhrn zrážok:"
 
-#: src/e_mod_main.c:1256
+#: src/e_mod_main.c:801
 msgid "Visibility:"
 msgstr "Viditeľnosť:"
 
-#: src/e_mod_main.c:1262
+#: src/e_mod_main.c:807
 msgid "Pressure:"
 msgstr "Tlak:"
 
-#: src/e_mod_main.c:1271
+#: src/e_mod_main.c:816
 msgid "Sunrise / Sunset: "
 msgstr "Východ/Západ slnka: "
 
-#: src/e_mod_main.c:1289
+#: src/e_mod_main.c:843
 msgid "Today"
 msgstr "Dnes"
 
-#: src/e_mod_main.c:1291
+#: src/e_mod_main.c:845
 msgid "Tomorrow"
 msgstr "Zajtra"
 
-#: src/e_mod_main.c:1299
+#: src/e_mod_main.c:854
 msgid "High"
 msgstr "Najvyššia"
 
-#: src/e_mod_main.c:1310
+#: src/e_mod_main.c:865
 msgid "Low"
 msgstr "Najnižšia"

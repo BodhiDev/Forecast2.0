@@ -34,8 +34,7 @@ fc_parse_json(void *data)
 
    char *needle;
    char city[256], region[256], country[256], location[513];
-   float visibility, pressure;
-   json_object *root, *main, *submain, *sub, *temp;
+   json_object *root, *main, *submain, *sub;
    Eina_Bool have_lang =  (inst->ci->lang[0] != '\0') && strcmp(inst->ci->lang, "en");
 
    needle = (char *) eina_binbuf_string_get(inst->buffer);

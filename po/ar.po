@@ -1,12 +1,12 @@
-# Arabic translation for forecasts.
-# This file is put in the public domain.
+# Arabic translation for the Forecasts module.
+# This file is distributed under the same license as the forecasts module.
 # sameeer hussain <almusalimalmusalimah> 2011.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: forcast module\n"
-"Report-Msgid-Bugs-To: enlightenment-devel@lists.sourceforge.net\n"
-"POT-Creation-Date: 2020-06-30 15:26+0200\n"
+"Project-Id-Version: forcasts\n"
+"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
+"POT-Creation-Date: 2024-12-16 15:31-0500\n"
 "PO-Revision-Date: 2012-01-24 20:44+0300\n"
 "Last-Translator: سمير حسين <almusalimalmusalimah@gmail.com>\n"
 "Language-Team: Arabic <almusalimalmusalimah@gmail.com>\n"
@@ -35,121 +35,121 @@ msgstr "استطلاع الوقت"
 msgid "%2.0f minutes"
 msgstr "%2.0f دقائق"
 
-#: src/e_mod_config.c:107
+#: src/e_mod_config.c:106
 #, fuzzy
 msgid "Forecasts days"
 msgstr "التوقعات"
 
-#: src/e_mod_config.c:109
+#: src/e_mod_config.c:108
 #, fuzzy, c-format
 msgid "%2.0f days"
 msgstr "%2.0f دقائق"
 
-#: src/e_mod_config.c:112
+#: src/e_mod_config.c:111
 msgid "Show Description"
 msgstr "اعرض الوصف"
 
-#: src/e_mod_config.c:114
+#: src/e_mod_config.c:113
 msgid "Popup on mouse over"
 msgstr "منبثقة عند مرور الفأرة"
 
-#: src/e_mod_config.c:118
+#: src/e_mod_config.c:117
 msgid "Unit Settings"
 msgstr "إعدادات الوحدة"
 
-#: src/e_mod_config.c:120
+#: src/e_mod_config.c:119
 msgid "Metric"
 msgstr "متري"
 
-#: src/e_mod_config.c:122
+#: src/e_mod_config.c:121
 msgid "English"
 msgstr "اﻹنجليزية"
 
-#: src/e_mod_config.c:126
+#: src/e_mod_config.c:125
 #, fuzzy
 msgid "Weather location"
 msgstr "تشفير توقعات Weather.com"
 
-#: src/e_mod_config.c:128
+#: src/e_mod_config.c:127
 msgid "City name (empty = local) "
 msgstr ""
 
-#: src/e_mod_config.c:134
+#: src/e_mod_config.c:133
 msgid "Custom location label "
 msgstr ""
 
-#: src/e_mod_config.c:142
+#: src/e_mod_config.c:141
 msgid "Language support"
 msgstr ""
 
-#: src/e_mod_config.c:144
+#: src/e_mod_config.c:143
 msgid "Language code (e.g. sk)    "
 msgstr ""
 
-#: src/e_mod_main.c:270
+#: src/e_mod_main.c:168
 msgid "Forecasts"
 msgstr "التوقعات"
 
-#: src/e_mod_main.c:312
+#: src/e_mod_main.c:210
 msgid "Settings"
 msgstr "اﻹعدادات"
 
-#: src/e_mod_main.c:1212
+#: src/e_mod_main.c:755 src/e_mod_main.c:757
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: الوضع الحالي"
 
-#: src/e_mod_main.c:1226
+#: src/e_mod_main.c:771
 msgid "Feels Like:"
 msgstr ""
 
-#: src/e_mod_main.c:1232
+#: src/e_mod_main.c:777
 #, fuzzy
 msgid "Wind Chill:"
 msgstr "برودة الرياح"
 
-#: src/e_mod_main.c:1238
+#: src/e_mod_main.c:783
 #, fuzzy
 msgid "Wind Speed:"
 msgstr "سرعة الرياح"
 
-#: src/e_mod_main.c:1244
+#: src/e_mod_main.c:789
 #, fuzzy
 msgid "Humidity:"
 msgstr "الرطوبة"
 
-#: src/e_mod_main.c:1250
+#: src/e_mod_main.c:795
 msgid "Precipitation:"
 msgstr ""
 
-#: src/e_mod_main.c:1256
+#: src/e_mod_main.c:801
 #, fuzzy
 msgid "Visibility:"
 msgstr "الرؤية"
 
-#: src/e_mod_main.c:1262
+#: src/e_mod_main.c:807
 #, fuzzy
 msgid "Pressure:"
 msgstr "الضغط"
 
-#: src/e_mod_main.c:1271
+#: src/e_mod_main.c:816
 #, fuzzy
 msgid "Sunrise / Sunset: "
 msgstr "الشروق / الغروب"
 
-#: src/e_mod_main.c:1289
+#: src/e_mod_main.c:843
 msgid "Today"
 msgstr "اليوم"
 
-#: src/e_mod_main.c:1291
+#: src/e_mod_main.c:845
 msgid "Tomorrow"
 msgstr "غدا"
 
-#: src/e_mod_main.c:1299
+#: src/e_mod_main.c:854
 msgid "High"
 msgstr "عالي"
 
-#: src/e_mod_main.c:1310
+#: src/e_mod_main.c:865
 msgid "Low"
 msgstr "منخفض"
 

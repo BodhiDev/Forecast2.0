@@ -32,9 +32,9 @@ First install all the needed dependencies. Note this includes not only EFL but t
 Then the usual:
 
 ```ShellSession
-./autogen.sh
-make
-sudo make install
+meson . build
+ninja -C build
+sudo ninja -C build install
 ```
 # Usage
 
