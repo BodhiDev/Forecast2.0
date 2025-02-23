@@ -27,7 +27,7 @@ EAPI void *e_modapi_init(E_Module *m);
 EAPI int   e_modapi_shutdown(E_Module *m __UNUSED__);
 EAPI int   e_modapi_save(E_Module *m __UNUSED__);
 
-void _config_forecasts_module(Config_Item *ci);
+void _config_forecasts_module(Evas_Object *parent, Config_Item *ci);
 void _fc_config_updated(Config_Item *ci);
 
 extern Config *forecasts_config;

@@ -47,8 +47,8 @@ static void         _fc_popup_content_create(Instance *inst);
 static Eina_Bool    _cb_url_data(void *data, int type __UNUSED__, void *event);
 static Eina_Bool    _cb_url_complete(void *data, int type __UNUSED__, void *event);
 static void         _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
-static void         _cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
-static void         _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
+//~ static void         _cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
+//~ static void         _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__);
 static Evas_Object *_fc_popup_icon_create(Evas *evas, int code);
 static void         _fc_popup_destroy(Instance *inst);
 static void         _right_values_update(Instance *inst);
@@ -83,10 +83,10 @@ _gc_init(E_Gadcon *gc, const char *name, const char *id, const char *style)
    inst->forecasts_obj = o;
    evas_object_event_callback_add(inst->forecasts_obj, EVAS_CALLBACK_MOUSE_DOWN,
                                   _cb_mouse_down, inst);
-   evas_object_event_callback_add(inst->forecasts_obj, EVAS_CALLBACK_MOUSE_IN,
-                                  _cb_mouse_in, inst);
-   evas_object_event_callback_add(inst->forecasts_obj, EVAS_CALLBACK_MOUSE_OUT,
-                                  _cb_mouse_out, inst);
+   //~ evas_object_event_callback_add(inst->forecasts_obj, EVAS_CALLBACK_MOUSE_IN,
+                                  //~ _cb_mouse_in, inst);
+   //~ evas_object_event_callback_add(inst->forecasts_obj, EVAS_CALLBACK_MOUSE_OUT,
+                                  //~ _cb_mouse_out, inst);
    evas_object_event_callback_add(w->forecasts_obj, EVAS_CALLBACK_MOUSE_DOWN,	
                                   _cb_fc_mouse_down, inst);
 
@@ -191,7 +191,7 @@ _gc_id_new(const E_Gadcon_Client_Class *client_class __UNUSED__)
 }
  
 static void
-_cb_fc_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
+_cb_fc_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj,
                          void *event_info __UNUSED__)
 {
    EINA_SAFETY_ON_NULL_RETURN(data);
@@ -215,8 +215,7 @@ _cb_fc_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__,
 
         e_gadcon_canvas_zone_geometry_get(inst->gcc->gadcon, &x, &y, &w, &h);
         e_menu_activate_mouse(m,
-                              e_util_zone_current_get(e_manager_current_get
-                                                        ()), x + ev->output.x,
+                              e_zone_current_get(), x + ev->output.x,
                               y + ev->output.y, 1, 1,
                               E_MENU_POP_DIRECTION_DOWN, ev->timestamp);
         evas_event_feed_mouse_up(inst->gcc->gadcon->evas, ev->button,
@@ -228,13 +227,13 @@ static void
 _cb_fc_menu_configure(void *data, E_Menu *m __UNUSED__, E_Menu_Item *mi __UNUSED__)
 {
    EINA_SAFETY_ON_NULL_RETURN(data);
-
+   
    Instance *inst = data;
 
    if (!forecasts_config) return;
    if (forecasts_config->config_dialog) return;
 
-   _config_forecasts_module(inst->ci);
+   _config_forecasts_module(NULL, inst->ci);
 }
  
 
@@ -747,9 +746,10 @@ _fc_popup_content_create(Instance *inst)
 
    if (!inst->location) return;
 
-   inst->popup = e_gadcon_popup_new(inst->gcc);
+   inst->popup = e_gadcon_popup_new(inst->gcc, EINA_FALSE);
 
-   evas = inst->popup->win->evas;
+   //~ evas = inst->popup->win->evas;
+   evas = e_comp->evas;
    o = e_widget_list_add(evas, 0, 0);
    if (inst->ci->label[0] == '\0')
      snprintf(buf, sizeof(buf), D_("%s: Current Conditions"), inst->location);
@@ -761,7 +761,7 @@ _fc_popup_content_create(Instance *inst)
    ob = e_widget_label_add(evas, buf);
    e_widget_frametable_object_append(of, ob, 0, row, 2, 1, 0, 1, 1, 0);
 
-   oi = _fc_popup_icon_create(inst->popup->win->evas, inst->condition.code);
+   oi = _fc_popup_icon_create(e_comp->evas, inst->condition.code);
    edje_object_size_max_get(oi, &w, &h);
    if (w > 160) w = 160;  /* For now there is a limit to how big the icon should be */
    if (h > 160) h = 160;  /* In the future, the icon should be set from the theme, not part of the table */
@@ -858,7 +858,7 @@ _fc_popup_content_create(Instance *inst)
         e_widget_frametable_object_append(of, ob, 1, row, 1, 1, 1, 0, 1, 0);
 
         ob = e_widget_image_add_from_object(evas,
-                                            _fc_popup_icon_create(inst->popup->win->evas,
+                                            _fc_popup_icon_create(e_comp->evas,
                                                                          inst->forecast[i].code), 0, 0);
         e_widget_frametable_object_append(of, ob, 2, row, 1, 2, 1, 1, 0, 0);
 
@@ -922,36 +922,53 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
     }
     else if (ev->button == 1)
      {
-       if (!inst->ci->popup_on_hover)
+       //~ if (!inst->ci->popup_on_hover)
           {
-             if (!inst->popup) _fc_popup_content_create(inst);
-             e_gadcon_popup_show(inst->popup);
+             if (!inst->popup) 
+		       {
+                 _fc_popup_content_create(inst);
+                 e_gadcon_popup_show(inst->popup);
+			   }
+			   else
+			     _fc_popup_destroy(inst);
              return;
           }
       e_gadcon_popup_toggle_pinned(inst->popup);
     }
 }
  
-static void
-_cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
-{
-   EINA_SAFETY_ON_NULL_RETURN(data);
+//~ static void
+//~ _cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
+//~ {
+   //~ EINA_SAFETY_ON_NULL_RETURN(data);
 
-   Instance *inst = data;
-   if (!inst->ci->popup_on_hover) return;
+   //~ Instance *inst = data;
+   //~ if (!inst->ci->popup_on_hover) return;
 
-   if (!inst->popup) _fc_popup_content_create(inst);
-   e_gadcon_popup_show(inst->popup);
-}
+   //~ if (!inst->popup) _fc_popup_content_create(inst);
+   //~ e_gadcon_popup_show(inst->popup);
+//~ }
+
+//~ static void
+//~ _cb_mouse_in(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
+//~ {
+   //~ EINA_SAFETY_ON_NULL_RETURN(data);
+
+   //~ Instance *inst = data;
+   //~ if (!inst->ci->popup_on_hover) return;
+
+   //~ if (!inst->popup) _fc_popup_content_create(inst);
+   //~ e_gadcon_popup_show(inst->popup);
+//~ }
  
-static void
-_cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
-{
-   EINA_SAFETY_ON_NULL_RETURN(data);
+//~ static void
+//~ _cb_mouse_out(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void *event_info __UNUSED__)
+//~ {
+   //~ EINA_SAFETY_ON_NULL_RETURN(data);
 
-   Instance *inst = data;
-   if (!(inst->popup)) return;
+   //~ Instance *inst = data;
+   //~ if (!(inst->popup)) return;
 
-   if (inst->popup->pinned) return;
-   e_gadcon_popup_hide(inst->popup);
-}
+   //~ if (inst->popup->pinned) return;
+   //~ e_gadcon_popup_hide(inst->popup);
+//~ }

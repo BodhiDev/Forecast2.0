@@ -24,12 +24,11 @@ static int          _basic_apply_data(E_Config_Dialog *cfd,
 static void         _fill_data(Config_Item *ci, E_Config_Dialog_Data *cfdata);
 
 void
-_config_forecasts_module(Config_Item *ci)
+_config_forecasts_module(Evas_Object *parent, Config_Item *ci)
 {
    E_Config_Dialog *cfd;
    E_Config_Dialog_View *v;
-   E_Container *con;
-   // char buf[4096];
+   char buf[4096];
 
    v = E_NEW(E_Config_Dialog_View, 1);
 
@@ -40,11 +39,12 @@ _config_forecasts_module(Config_Item *ci)
    v->override_auto_apply = 1;
 
    // Icon for setting dialog
-   //~ snprintf(buf, sizeof(buf), "%s/module.edj",
-            //~ e_module_dir_get(forecasts_config->module));
-   con = e_container_current_get(e_manager_current_get());
-   cfd = e_config_dialog_new(con, D_("Forecasts Settings"), "Forecasts", 
-         "_e_modules_forecasts_config_dialog", "preferences-system", 0, v, ci);
+   snprintf(buf, sizeof(buf), "%s/module.edj",
+         e_module_dir_get(forecasts_config->module));
+   cfd = e_config_dialog_new(parent, D_("Forecasts Settings"), "Forecasts", 
+         "_e_modules_forecasts_config_dialog", buf, 0, v, ci);
+   
+   e_dialog_resizable_set(cfd->dia, 1);
    forecasts_config->config_dialog = cfd;
 }
 
@@ -89,6 +89,16 @@ _free_data(E_Config_Dialog *cfd __UNUSED__, E_Config_Dialog_Data *cfdata)
    cfdata = NULL;
 }
 
+#define CHECKBOX(_text_, _pointer_)                                      \
+   chk = elm_check_add(box2);                                            \
+   elm_object_text_set(chk, _text_);                                     \
+   elm_check_state_pointer_set(chk, _pointer_);                          \
+   evas_object_smart_callback_add(chk, "changed", _all_changed_cb, cfd); \
+   E_EXPAND(chk);                                                        \
+   E_FILL(chk);                                                          \
+   elm_box_pack_end(box2, chk);                                          \
+   evas_object_show(chk);
+
 static Evas_Object *
 _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
                       E_Config_Dialog_Data *cfdata)
@@ -100,18 +110,18 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
    of = e_widget_framelist_add(evas, D_("Display Settings"), 0);
    ob = e_widget_label_add(evas, D_("Poll Time"));
    e_widget_framelist_object_append(of, ob);
-   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f minutes"), 15.0, 60.0, 1.0, 0,&(cfdata->poll_time), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f minutes"), 15.0, 60.0, 1.0, 0,&(cfdata->poll_time), NULL, 200);
    e_widget_framelist_object_append(of, ob);
 
    ob = e_widget_label_add(evas, D_("Forecasts days"));
    e_widget_framelist_object_append(of, ob);
-   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f days"), 2.0, 3.0, 1.0, 0, &(cfdata->days), NULL, 40);
+   ob = e_widget_slider_add(evas, 1, 0, D_("%2.0f days"), 2.0, 3.0, 1.0, 0, &(cfdata->days), NULL, 60);
    e_widget_framelist_object_append(of, ob);
    
    ob = e_widget_check_add(evas, D_("Show Description"), &(cfdata->show_text));
    e_widget_framelist_object_append(of, ob);
-   ob = e_widget_check_add(evas, D_("Popup on mouse over"), &(cfdata->popup_on_hover));
-   e_widget_framelist_object_append(of, ob);
+   //~ ob = e_widget_check_add(evas, D_("Popup on mouse over"), &(cfdata->popup_on_hover));
+   //~ e_widget_framelist_object_append(of, ob);
    e_widget_list_object_append(o, of, 1, 1, 0.5);
 
    of = e_widget_framelist_add(evas, D_("Unit Settings"), 0);
@@ -126,14 +136,14 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
 
    ob = e_widget_label_add(evas, D_("City name (empty = local) "));
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
-   ob = e_widget_entry_add(evas, &cfdata->code, NULL, NULL, NULL);
-   e_widget_size_min_set(ob, 120, 28);
-   e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 0, 1, 0);
+   ob = e_widget_entry_add(cfd->dia->win, &cfdata->code, NULL, NULL, NULL);
+   //~ e_widget_size_min_set(ob, 120, 28);
+   e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 1, 1, 1);
 
    ob = e_widget_label_add(evas, D_("Custom location label "));
    e_widget_frametable_object_append(of, ob, 0, 2, 1, 1, 1, 0, 1, 0);
-   ob = e_widget_entry_add(evas, &cfdata->label, NULL, NULL, NULL);
-   e_widget_size_min_set(ob, 120, 28);
+   ob = e_widget_entry_add(cfd->dia->win, &cfdata->label, NULL, NULL, NULL);
+   //~ e_widget_size_min_set(ob, 120, 28);
    e_widget_frametable_object_append(of, ob, 1, 2, 1, 1, 1, 0, 1, 0);
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
@@ -142,8 +152,8 @@ _basic_create_widgets(E_Config_Dialog *cfd __UNUSED__, Evas *evas,
 
    ob = e_widget_label_add(evas, D_("Language code (e.g. sk)    "));
    e_widget_frametable_object_append(of, ob, 0, 1, 1, 1, 1, 0, 1, 0);
-   ob = e_widget_entry_add(evas, &cfdata->lang, NULL, NULL, NULL);
-   e_widget_size_min_set(ob, 40, 28);
+   ob = e_widget_entry_add(cfd->dia->win, &cfdata->lang, NULL, NULL, NULL);
+   //~ e_widget_size_min_set(ob, 60, 28);
    e_widget_frametable_object_append(of, ob, 1, 1, 1, 1, 1, 0, 1, 0);
 
    e_widget_list_object_append(o, of, 1, 1, 0.5);
