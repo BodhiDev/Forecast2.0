@@ -1,6 +1,6 @@
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/paypalme/rbtylee)
 
-# forecast2.0
+# forecast2.0 for Enlightenment desktop
 
 [<img src="https://i.imgur.com/0n1e1eR.jpg   ">](https://i.imgur.com/0n1e1eR.jpg )
 
