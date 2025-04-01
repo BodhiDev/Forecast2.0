@@ -31,7 +31,7 @@ msgstr "मौसम सर्वेक्षण का समय"
 #: src/e_mod_config.c:103
 #, c-format
 msgid "%2.0f minutes"
-msgstr "%2.मिनटों का"
+msgstr "%2.0f मिनटों का"
 
 #: src/e_mod_config.c:106
 msgid "Forecasts days"
@@ -40,7 +40,7 @@ msgstr "पूर्वानुमानित दिन"
 #: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f days"
-msgstr "%2.दिनों का"
+msgstr "%2.0f दिनों का"
 
 #: src/e_mod_config.c:111
 msgid "Show Description"
