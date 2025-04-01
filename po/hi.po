@@ -18,127 +18,127 @@ msgstr ""
 
 #: src/e_mod_config.c:46
 msgid "Forecasts Settings"
-msgstr ""
+msgstr "पूर्वानुमान सेटिंग्स"
 
 #: src/e_mod_config.c:100
 msgid "Display Settings"
-msgstr ""
+msgstr "प्रदर्शन सेटिंग्स"
 
 #: src/e_mod_config.c:101
 msgid "Poll Time"
-msgstr ""
+msgstr "मौसम सर्वेक्षण का समय"
 
 #: src/e_mod_config.c:103
 #, c-format
 msgid "%2.0f minutes"
-msgstr ""
+msgstr "%2.मिनटों का"
 
 #: src/e_mod_config.c:106
 msgid "Forecasts days"
-msgstr ""
+msgstr "पूर्वानुमानित दिन"
 
 #: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f days"
-msgstr ""
+msgstr "%2.दिनों का"
 
 #: src/e_mod_config.c:111
 msgid "Show Description"
-msgstr ""
+msgstr "विवरण दिखाएँ"
 
 #: src/e_mod_config.c:113
 msgid "Popup on mouse over"
-msgstr ""
+msgstr "माउस पर पॉपअप दिखाएं"
 
 #: src/e_mod_config.c:117
 msgid "Unit Settings"
-msgstr ""
+msgstr "इकाई सेटिंग्स"
 
 #: src/e_mod_config.c:119
 msgid "Metric"
-msgstr ""
+msgstr "मीट्रिक"
 
 #: src/e_mod_config.c:121
 msgid "English"
-msgstr ""
+msgstr "अंग्रेज़ी"
 
 #: src/e_mod_config.c:125
 msgid "Weather location"
-msgstr ""
+msgstr "मौसम का स्थान"
 
 #: src/e_mod_config.c:127
 msgid "City name (empty = local) "
-msgstr ""
+msgstr "शहर का नाम (खाली = स्थानीय(local))"
 
 #: src/e_mod_config.c:133
 msgid "Custom location label "
-msgstr ""
+msgstr "कस्टम स्थान लेबल"
 
 #: src/e_mod_config.c:141
 msgid "Language support"
-msgstr ""
+msgstr "भाषा समर्थन"
 
 #: src/e_mod_config.c:143
 msgid "Language code (e.g. sk)    "
-msgstr ""
+msgstr "भाषा कोड (उदाहरणार्थ sk)"
 
 #: src/e_mod_main.c:168
 msgid "Forecasts"
-msgstr ""
+msgstr "पूर्वानुमान"
 
 #: src/e_mod_main.c:210
 msgid "Settings"
-msgstr ""
+msgstr "सेटिंग्स"
 
 #: src/e_mod_main.c:755 src/e_mod_main.c:757
 #, c-format
 msgid "%s: Current Conditions"
-msgstr ""
+msgstr "%s: वर्तमान स्थिति"
 
 #: src/e_mod_main.c:771
 msgid "Feels Like:"
-msgstr ""
+msgstr "जैसा महसूस होता है"
 
 #: src/e_mod_main.c:777
 msgid "Wind Chill:"
-msgstr ""
+msgstr "ठंडी हवा"
 
 #: src/e_mod_main.c:783
 msgid "Wind Speed:"
-msgstr ""
+msgstr "हवा की गति"
 
 #: src/e_mod_main.c:789
 msgid "Humidity:"
-msgstr ""
+msgstr "नमी"
 
 #: src/e_mod_main.c:795
 msgid "Precipitation:"
-msgstr ""
+msgstr "वर्षण"
 
 #: src/e_mod_main.c:801
 msgid "Visibility:"
-msgstr ""
+msgstr "दृश्यता"
 
 #: src/e_mod_main.c:807
 msgid "Pressure:"
-msgstr ""
+msgstr "वायु - दाब"
 
 #: src/e_mod_main.c:816
 msgid "Sunrise / Sunset: "
-msgstr ""
+msgstr "सूर्योदय /सूर्यास्त"
 
 #: src/e_mod_main.c:843
 msgid "Today"
-msgstr ""
+msgstr "आज"
 
 #: src/e_mod_main.c:845
 msgid "Tomorrow"
-msgstr ""
+msgstr "कल"
 
 #: src/e_mod_main.c:854
 msgid "High"
-msgstr ""
+msgstr "उच्च"
 
 #: src/e_mod_main.c:865
 msgid "Low"
-msgstr ""
+msgstr "निचला"
