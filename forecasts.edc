@@ -55,45 +55,32 @@ collections {
            type: RECT;
            mouse_events: 1;
            description {
-           state: "default" 0.0;
-           color: 0 0 0 0;
-           rel1 {
-               offset: 0 0;
-           }
-           rel2 {
-               offset: -1 -1;
-           }
+             state: "default" 0.0;
+             color: 0 0 0 0;
+             rel1.offset: 0 0;
+             rel2.offset: -1 -1;
            }
        }
        part {
-           name:         "icon";
-           type:         SWALLOW;
+           name: "icon";
+           type: SWALLOW;
            mouse_events: 0;
            description {
-           state:    "default" 0.0;
-           aspect_preference: BOTH;
-           align:    0.0 0.0;
-           rel1 {
-               relative: 0.0 0.0;
-               offset:   0   0;
-           }
-           rel2 {
-               relative: 1.0 1.0;
-               offset:   -1  -1;
-           }
-           //color: 0 0 0 0;
+             state:    "default" 0.0;
+             aspect_preference: BOTH;
+             align:    0.0 0.0;
+             rel1.relative: 0.0 0.0;
+             rel1.offset:   0   0;
+             rel2.relative: 1.0 1.0;
+             rel2.offset:   -1  -1;
            }
            description {
-           state: "float" 0.0;
-           inherit: "default" 0.0;
-                   aspect: 1.0 1.0;
-                   rel1 {
-                       relative: 0.0 0.0;
-                   }
-                   rel2 {
-                       relative: 0.6 1.0;
-                       offset: 2 2;
-                   }
+             state: "float" 0.0;
+             inherit: "default" 0.0;
+             aspect: 1.0 1.0;
+             rel1.relative: 0.0 0.0;
+             rel2.relative: 0.6 1.0;
+             rel2.offset: 2 2;
            }
        }
        part {
@@ -103,22 +90,22 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-           rel1 {
+             state: "default" 0.0;
+             rel1 {
                relative: 0.0 0.0;
                offset:   0   0;
                to: "icon";
-           } 
-           rel2 {
+             } 
+             rel2 {
                relative: 1.0 0.7;
                offset:   -1  -1;
                to:       "icon";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
                text:  "";
                font:  "Sans:style=Bold";
                size:  10;
@@ -127,35 +114,35 @@ collections {
                fit: 1 1;
                text_class: "module_large";
                ellipsis: -1;
-           }
-           }
-           description {
-           state: "hidden" 0.0;
-           inherit: "default" 0.0;
-                   rel1 {
-                         relative: 0.0 0.0;
-                         offset:   0   0;
-                         to: "icon";
-                   }
-                   rel2 {
-                         relative: 1.0 1.0;
-                         offset:   -1  -1;
-                         to:       "icon";
-                   }
-                   text.align: 0.5 1.0;
+             }
            }
            description {
-           state: "float" 0.0;
-           inherit: "default" 0.0;
-                   rel1 {
-                       relative: 0.0 1.0;
-                       offset: 2 -20;
-                   }
-                   rel2 {
-                       relative: 1.0 1.0;
-                       offset: -2 -2;
-                   }
-                   text.align: 0.5 1.0;
+             state: "hidden" 0.0;
+             inherit: "default" 0.0;
+             rel1 {
+               relative: 0.0 0.0;
+               offset:   0   0;
+               to: "icon";
+             }
+             rel2 {
+               relative: 1.0 1.0;
+               offset:   -1  -1;
+               to:       "icon";
+             }
+             text.align: 0.5 1.0;
+           }
+           description {
+             state: "float" 0.0;
+             inherit: "default" 0.0;
+             rel1 {
+               relative: 0.0 1.0;
+               offset: 2 -20;
+             }
+             rel2 {
+               relative: 1.0 1.0;
+               offset: -2 -2;
+             }
+             text.align: 0.5 1.0;
            }
        }
        part {
@@ -165,21 +152,21 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-           rel1 {
+             state: "default" 0.0;
+             rel1 {
                relative: 0.0 0.0;
                offset:   -1  -1;
                to_x:     "icon";
-           }
-           rel2 {
+             }
+             rel2 {
                relative: 1.0 0.9;
                offset:   -1  -1;
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
                text:  "";
                font:  "Sans:style=Bold";
                size:  10;
@@ -188,27 +175,27 @@ collections {
                fit: 1 1; 
                text_class: "module_normal";
                ellipsis: -1;
-           }
-           }
-           description {
-           state: "hidden" 0.0;
-           inherit: "default" 0.0;
-           visible: 0;
+             }
            }
            description {
-           state: "float" 0.0;
-           inherit: "default" 0.0;
-                   rel1 {
-                       relative: 0.0 0.0;
-                       offset: 1 -14;
-                       to: "e.text.temp";
-                   }
-                   rel2 {
-                       relative: 1.0 0.0;
-                       offset: -2 -2;
-                       to: "e.text.temp";
-                   }
-                   text.fit: 0 0;
+             state: "hidden" 0.0;
+             inherit: "default" 0.0;
+             visible: 0;
+           }
+           description {
+             state: "float" 0.0;
+             inherit: "default" 0.0;
+             rel1 {
+                relative: 0.0 0.0;
+                offset: 1 -14;
+                to: "e.text.temp";
+             }
+             rel2 {
+                relative: 1.0 0.0;
+                offset: -2 -2;
+                to: "e.text.temp";
+             }
+             text.fit: 0 0;
            }
        }
        part {
@@ -218,32 +205,31 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
                relative: 0.0 0.2;
                offset:   1  1;
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Location";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Location";
+                font:  "Sans:style=Bold";
+                size:  10;
+                min:   1 1;
+                align: 0.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
-       
        part {
            name:         "e.text.country";
            type:         TEXT;
@@ -251,72 +237,65 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
                relative: 0.0 0.2;
                offset:   1  14;
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "";
+                font:  "Sans:style=Bold";
+                size:  10;
+                min:   1 1;
+                align: 0.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
-           }
-       }
-       
-       
-       
+      }
       part {
            name: "day0";
            type: RECT;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-                   color: 0 0 0 0;
-                   rel1 {
-                       relative: 0.6 0.0;
-                       offset: 1 1;
-                   }
-                   rel2 {
-                       relative: 1.0 0.5;
-                       offset: -5 -5;
-                   }
-               }
+             state: "float" 0.0;
+             visible: 1;
+             color: 0 0 0 0;
+             rel1 {
+                relative: 0.6 0.0;
+                offset: 1 1;
+             }
+             rel2 {
+                relative: 1.0 0.5;
+                offset: -5 -5;
+             }
            }
+       }
        part {
            name:         "e.swallow.day0.icon";
            type:         SWALLOW;
            mouse_events: 0;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-                       to: "day0";
-           }
-           rel2 {
-                       to: "day0";
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1.to: "day0";
+             rel2.to: "day0";
            }
        }
        part {
@@ -326,35 +305,35 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-               relative: 0.0 0.0;
-               offset:   1  1;
-                       to: "day0";
-           }
-           rel2 {
-               relative: 1.0 1.0;
-               offset:   -1  -1;
-                       to: "day0";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Date0";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.5 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
+                relative: 0.0 0.0;
+                offset:   1  1;
+                to: "day0";
+             }
+             rel2 {
+                relative: 1.0 1.0;
+                offset:   -1  -1;
+                to: "day0";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Date0";
+                font:  "Sans:style=Bold";
+                size:  10;
+                min:   1 1;
+                align: 0.5 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
        part {
@@ -364,37 +343,37 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-               relative: 0.0 0.0;
-               offset:   1  -14;
-                       to_x: "day0";
-                       to_y: "e.text.day0.low";
-           }
-           rel2 {
-               relative: 1.0 0.0;
-               offset:   -1  -1;
-                       to_x: "day0";
-                       to_y: "e.text.day0.low";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Description0";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.5 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
+                relative: 0.0 0.0;
+                offset:   1  -14;
+                to_x: "day0";
+                to_y: "e.text.day0.low";
+             }
+             rel2 {
+                relative: 1.0 0.0;
+                offset:   -1  -1;
+                to_x: "day0";
+                to_y: "e.text.day0.low";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Description0";
+                font:  "Sans:style=Bold";
+                size:  10;
+                min:   1 1;
+                align: 0.5 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
        part {
@@ -404,35 +383,35 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
                relative: 0.0 1.0;
                offset:   1  -14;
-                       to: "day0";
-           }
-           rel2 {
+               to: "day0";
+             }
+             rel2 {
                relative: 1.0 1.0;
                offset:   -1  -1;
-                       to: "day0";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Low0";
-               font:  "Sans:style=Bold";
-               size:  9;
-               min:   1 1;
-               align: 0.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+               to: "day0";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Low0";
+                font:  "Sans:style=Bold";
+                size:  9;
+                min:   1 1;
+                align: 0.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
        part {
@@ -442,75 +421,70 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-               relative: 0.0 1.0;
-                       offset: 0 -14;
-                       to: "day0";
-           }
-           rel2 {
-               relative: 1.0 1.0;
-                       to: "day0";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "High0";
-               font:  "Sans:style=Bold";
-               size:  9;
-               min:   1 1;
-               align: 1.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
+                relative: 0.0 1.0;
+                offset: 0 -14;
+                to: "day0";
+             }
+             rel2 {
+                relative: 1.0 1.0;
+                to: "day0";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "High0";
+                font:  "Sans:style=Bold";
+                size:  9;
+                min:   1 1;
+                align: 1.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
-
-           part {
-               name: "day1";
-               type: RECT;
-               description {
-           state: "default" 0.0;
-                   visible: 0;
-           }
-           description {
-           state: "float" 0.0;
-                   visible: 1;
-                   color: 0 0 0 0;
-                   rel1 {
-                       relative: 0.6 0.5;
-                       offset: 4 4;
-                   }
-                   rel2 {
-                       relative: 1.0 1.0;
-                       offset: -1 -1;
-                   }
-               }
-           }
+       part {
+          name: "day1";
+          type: RECT;
+          description {
+            state: "default" 0.0;
+            visible: 0;
+          }
+          description {
+            state: "float" 0.0;
+            visible: 1;
+            color: 0 0 0 0;
+            rel1 {
+               relative: 0.6 0.5;
+               offset: 4 4;
+            }
+            rel2 {
+               relative: 1.0 1.0;
+               offset: -1 -1;
+            }
+          }
+       }
        part {
            name:         "e.swallow.day1.icon";
            type:         SWALLOW;
            mouse_events: 0;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-                       to: "day1";
-           }
-           rel1 {
-                       to: "day1";
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1.to: "day1";
+             rel1.to: "day1";
            }
        }
        part {
@@ -520,35 +494,35 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
                relative: 0.0 0.0;
                offset:   1  1;
-                       to: "day1";
-           }
-           rel2 {
+               to: "day1";
+             }
+             rel2 {
                relative: 1.0 1.0;
                offset:   -1  -1;
-                       to: "day1";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Date1";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.5 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+               to: "day1";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                 text:  "Date1";
+                 font:  "Sans:style=Bold";
+                 size:  10;
+                 min:   1 1;
+                 align: 0.5 0.0;
+                 text_class: "module_normal";
+                 ellipsis: -1;
+             }
            }
        }
        part {
@@ -558,37 +532,37 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-               relative: 0.0 0.0;
-               offset:   1  -14;
-                       to_x: "day1";
-                       to_y: "e.text.day1.low";
-           }
-           rel2 {
-               relative: 1.0 0.0;
-               offset:   -1  -1;
-                       to_x: "day1";
-                       to_y: "e.text.day1.low";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Description1";
-               font:  "Sans:style=Bold";
-               size:  10;
-               min:   1 1;
-               align: 0.5 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
+                relative: 0.0 0.0;
+                offset:   1  -14;
+                to_x: "day1";
+                to_y: "e.text.day1.low";
+             }
+             rel2 {
+                relative: 1.0 0.0;
+                offset:   -1  -1;
+                to_x: "day1";
+                to_y: "e.text.day1.low";
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Description1";
+                font:  "Sans:style=Bold";
+                size:  10;
+                min:   1 1;
+                align: 0.5 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
        part {
@@ -598,35 +572,35 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
                relative: 0.0 1.0;
                offset:   1  -14;
                        to: "day1";
-           }
-           rel2 {
+             }
+             rel2 {
                relative: 1.0 1.0;
                offset:   -1  -1;
                        to: "day1";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "Low1";
-               font:  "Sans:style=Bold";
-               size:  9;
-               min:   1 1;
-               align: 0.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "Low1";
+                font:  "Sans:style=Bold";
+                size:  9;
+                min:   1 1;
+                align: 0.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
        part {
@@ -636,38 +610,38 @@ collections {
            mouse_events: 0;
            scale:        1;
            description {
-           state: "default" 0.0;
-                   visible: 0;
+             state: "default" 0.0;
+             visible: 0;
            }
            description {
-           state: "float" 0.0;
-                   visible: 1;
-           rel1 {
-               relative: 0.0 1.0;
-                       offset: 0 -14;
+             state: "float" 0.0;
+             visible: 1;
+             rel1 {
+                relative: 0.0 1.0;
+                offset: 0 -14;
+                to: "day1";
+             }
+             rel2 {
+                relative: 1.0 1.0;
                        to: "day1";
-           }
-           rel2 {
-               relative: 1.0 1.0;
-                       to: "day1";
-           }
-           color:  255 255 255 255;
-           color2: 0 0 0 96;
-           color3: 0 0 0 32;
-           color_class: "module_label";
-           text {
-               text:  "High1";
-               font:  "Sans:style=Bold";
-               size:  9;
-               min:   1 1;
-               align: 1.0 0.0;
-               text_class: "module_normal";
-               ellipsis: -1;
-           }
+             }
+             color:  255 255 255 255;
+             color2: 0 0 0 96;
+             color3: 0 0 0 32;
+             color_class: "module_label";
+             text {
+                text:  "High1";
+                font:  "Sans:style=Bold";
+                size:  9;
+                min:   1 1;
+                align: 1.0 0.0;
+                text_class: "module_normal";
+                ellipsis: -1;
+             }
            }
        }
-       }
-       programs {
+   }
+   programs {
        program {
            name: "text_hide";
            signal: "e,state,description,hide";
@@ -696,24 +670,24 @@ collections {
            name: "float";
            signal: "e,state,orientation,float";
            source: "e";
-               script {
-                   set_int(is_float, 1);
-                   run_program(PROGRAM:"float_complete");
-               }
+           script {
+               set_int(is_float, 1);
+               run_program(PROGRAM:"float_complete");
+           }
        }
        program {
            name: "float_complete";
            action: STATE_SET "float" 0.0;
            ORIENT_TARGETS
-           }
+       }
        program {
            name: "shelf";
            signal: "e,state,orientation,default";
            source: "e";
-               script {
-                   set_int(is_float, 0);
-                   run_program(PROGRAM:"shelf_complete");
-               }
+           script {
+               set_int(is_float, 0);
+               run_program(PROGRAM:"shelf_complete");
+           }
        }
        program {
            name: "shelf_complete";
@@ -722,56 +696,56 @@ collections {
            }
        }
    }
-    
-    FORECASTS_ICON(0, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(395, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(392, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(386, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(200, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(389, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(377, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(350, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(374, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(365, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(362, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(320, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(317, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(314, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(311, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(284, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(281, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(185, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(182, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(371, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(368, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(338, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(335, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(332, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(329, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(326, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(323, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(227, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(179, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(230, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(359, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(356, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(308, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(305, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(302, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(299, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(353, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(296, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(293, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(266, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(263, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(176, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(143, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(260, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(248, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(122, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(119, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(116, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(113, 10, 10, 110, 110, 1.0)
-    FORECASTS_ICON(3200, 10, 10, 110, 110, 1.0)
+
+   FORECASTS_ICON(  0, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(395, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(392, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(386, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(200, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(389, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(377, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(350, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(374, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(365, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(362, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(320, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(317, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(314, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(311, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(284, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(281, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(185, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(182, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(371, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(368, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(338, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(335, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(332, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(329, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(326, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(323, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(227, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(179, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(230, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(359, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(356, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(308, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(305, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(302, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(299, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(353, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(296, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(293, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(266, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(263, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(176, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(143, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(260, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(248, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(122, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(119, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(116, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(113, 10, 10, 110, 110, 1.0)
+   FORECASTS_ICON(3200, 10, 10, 110, 110, 1.0)
 }
 
