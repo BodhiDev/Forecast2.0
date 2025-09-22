@@ -320,7 +320,8 @@ _fc_config_free(void)
         free(ci);
         ci = NULL;
      }
-     E_FREE(forecasts_config);
+
+   E_FREE(forecasts_config);
 }
 
 EAPI void *
@@ -385,7 +386,7 @@ e_modapi_init(E_Module *m)
         /* save the config to disk */
         e_config_save_queue();
      }
-    forecasts_config->module = m; // FIXME: This should not need set twice wtf
+   forecasts_config->module = m; // FIXME: This should not need set twice wtf
 
    _e_forecast_log_dom = eina_log_domain_register("Forecast", EINA_COLOR_ORANGE);
    eina_log_domain_level_set("Forecast", EINA_LOG_LEVEL_DBG);
@@ -409,7 +410,7 @@ e_modapi_shutdown(E_Module *m __UNUSED__)
    E_CONFIG_DD_FREE(conf_item_edd);
    E_CONFIG_DD_FREE(conf_edd);
 
-    eina_log_domain_unregister(_e_forecast_log_dom);
+   eina_log_domain_unregister(_e_forecast_log_dom);
    _e_forecast_log_dom = -1;
    return 1;
 }
@@ -494,7 +495,7 @@ _cb_fc_check(void *data)
    if (!url_con) WRN("error when creating ecore con url object.\n");
 
    ecore_con_url_data_set(url_con, inst);
-    if (!ecore_con_url_get(url_con))
+   if (!ecore_con_url_get(url_con))
      {
         WRN("Could not realize url request.\n");
         goto free_url_con;
@@ -502,8 +503,8 @@ _cb_fc_check(void *data)
    return ECORE_CALLBACK_RENEW;
 
    free_url_con:
-     ecore_con_url_free(url_con);
-     return ECORE_CALLBACK_RENEW;
+   ecore_con_url_free(url_con);
+   return ECORE_CALLBACK_RENEW;
 }
 
 static Eina_Bool
@@ -537,10 +538,10 @@ _cb_url_complete(void *data, int type __UNUSED__, void *event)
 
    ret = fc_parse_json(inst);
    if (ret)
-   {
-      _fc_converter(inst);
-      _fc_display_set(inst, ret);
-   }
+     {
+       _fc_converter(inst);
+       _fc_display_set(inst, ret);
+     }
    eina_binbuf_reset(inst->buffer);
 
    return ECORE_CALLBACK_DONE;
@@ -568,12 +569,12 @@ _fc_converter(Instance *inst)
         inst->details.atmosphere.pressure = inst->details.atmosphere.pressure_km;
 
         for (i = 0; i <= 2 ; i++)
-         {
+          {
             inst->forecast[i].low = inst->forecast[i].low_c;
             inst->forecast[i].high = inst->forecast[i].high_c;
           }
      }
-    else
+   else
      {
         inst->units.temp = 'F';
         snprintf(inst->units.distance, 3, "mi");
@@ -588,7 +589,7 @@ _fc_converter(Instance *inst)
         inst->details.atmosphere.pressure = inst->details.atmosphere.pressure_mi;
 
         for (i = 0; i <= 2; i++)
-         {
+          {
             inst->forecast[i].low = inst->forecast[i].low_f;
             inst->forecast[i].high = inst->forecast[i].high_f;
           }
@@ -618,8 +619,9 @@ _right_values_update(Instance *inst)
         if (swallow)
           evas_object_del(swallow);
         edje_object_part_swallow(inst->forecasts->forecasts_obj, name,
-                                 _fc_popup_icon_create(inst->gcc->gadcon->evas, inst->forecast[i].code));
-      }
+                                 _fc_popup_icon_create(inst->gcc->gadcon->evas,
+                                 inst->forecast[i].code));
+     }
 }
  
  
@@ -640,32 +642,42 @@ _fc_display_set(Instance *inst, Eina_Bool ok __UNUSED__)
    edje_object_part_swallow(inst->forecasts->forecasts_obj, "icon", inst->forecasts->icon_obj);
 
    if (!inst->ci->show_text)
-     edje_object_signal_emit(inst->forecasts_obj, "e,state,description,hide", "e");
+     {
+       edje_object_signal_emit(inst->forecasts_obj, "e,state,description,hide", "e");
+     }
    else
-     if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
-        edje_object_signal_emit(inst->forecasts_obj, "e,state,description,show,float", "e");
-     else
-        edje_object_signal_emit(inst->forecasts_obj, "e,state,description,show,default", "e");
+     {
+       if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
+         edje_object_signal_emit(inst->forecasts_obj,
+                                 "e,state,description,show,float", "e");
+       else
+         edje_object_signal_emit(inst->forecasts_obj,
+                                 "e,state,description,show,default", "e");
+     }
 
    if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
-   snprintf(buf, sizeof(buf), "%d °%c", inst->condition.temp, inst->units.temp);
+     snprintf(buf, sizeof(buf), "%d °%c", inst->condition.temp, inst->units.temp);
    else 
-   snprintf(buf, sizeof(buf), "%d°", inst->condition.temp);
+     snprintf(buf, sizeof(buf), "%d°", inst->condition.temp);
 
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.temp", buf);
    edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.description",
                              inst->condition.desc);
 
    if (inst->ci->label[0] == '\0')
-   { 
-     edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.location", inst->location);
-     edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.country", inst->country);
-   }
+     {
+       edje_object_part_text_set(inst->forecasts->forecasts_obj,
+                                 "e.text.location", inst->location);
+       edje_object_part_text_set(inst->forecasts->forecasts_obj,
+                                 "e.text.country", inst->country);
+     }
    else
-   { 
-     edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.location", inst->label);
-     edje_object_part_text_set(inst->forecasts->forecasts_obj, "e.text.country", "");
-   }
+     {
+       edje_object_part_text_set(inst->forecasts->forecasts_obj,
+                                 "e.text.location", inst->label);
+       edje_object_part_text_set(inst->forecasts->forecasts_obj,
+                                  "e.text.country", "");
+     }
 
    if (inst->gcc->gadcon->orient == E_GADCON_ORIENT_FLOAT)
       _right_values_update(inst); //Updating right two icons description
@@ -917,10 +929,10 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
    Evas_Event_Mouse_Down *ev = event_info;
 
    if ((ev->button == 1) && (ev->flags & EVAS_BUTTON_DOUBLE_CLICK))  
-    {
-     _cb_fc_check(inst);
-    }
-    else if (ev->button == 1)
+     {
+       _cb_fc_check(inst);
+     }
+   else if (ev->button == 1)
      {
        if (!inst->ci->popup_on_hover)
           {
@@ -928,8 +940,8 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
              e_gadcon_popup_show(inst->popup);
              return;
           }
-      e_gadcon_popup_toggle_pinned(inst->popup);
-    }
+       e_gadcon_popup_toggle_pinned(inst->popup);
+     }
 }
  
 static void
