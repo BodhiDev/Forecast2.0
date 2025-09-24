@@ -94,6 +94,7 @@ struct _Instance
    const char     *language;
    const char     *label;
    const char     *area;
+   const char     *update_at;
  
    E_Gadcon_Popup *popup;
    Config_Item    *ci;
