@@ -933,6 +933,7 @@ _cb_mouse_down(void *data, Evas *e __UNUSED__, Evas_Object *obj __UNUSED__, void
 
    if ((ev->button == 1) && (ev->flags & EVAS_BUTTON_DOUBLE_CLICK))  
      {
+       _fc_popup_destroy(inst);
        _cb_fc_check(inst);
      }
    else if (ev->button == 1)
