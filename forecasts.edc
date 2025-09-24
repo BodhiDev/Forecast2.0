@@ -44,6 +44,8 @@ group { \
 }
 
 collections {
+   images.image: "knob_round_busy.png" COMP;
+   images.image: "glow_round_corners.png" COMP;
    group {
        name: "modules/forecasts/main";
        script {
@@ -640,6 +642,45 @@ collections {
              }
            }
        }
+       part { name: "knob"; mouse_events: 0;
+         description { state: "default" 0.0;
+            image.normal: "knob_round_busy.png";
+            rel1.relative: 0.5 0.0;
+            rel1.offset: 7 7;
+            rel2.relative: 0.5 1.0;
+            rel2.offset: 7 -8;
+            align: 0.5 0.0;
+            min: 40 40;
+            max: 40 40;
+            fixed: 1 1;
+            color: 255 255 255 0;
+         }
+         description { state: "show" 0.0;
+            inherit: "default";
+            color: 255 255 255 255;
+         }
+      }
+      part { name: "knob_spinner"; mouse_events: 0;
+         description { state: "default" 0.0;
+            rel1.to: "knob";
+            rel2.to: "knob";
+            image.normal: "glow_round_corners.png";
+            map.on: 1;
+            map.smooth: 1;
+            map.rotation.center: "knob";
+            fixed: 1 1;
+            color: 255 255 255 0;
+         }
+         description { state: "spin" 0.0;
+            inherit: "default" 0.0;
+            map.rotation.z: 360;
+            color: 255 255 255 255;
+         }
+         description { state: "show" 0.0;
+            inherit: "spin";
+            color: 255 255 255 255;
+         }
+      }
    }
    programs {
        program {
@@ -693,8 +734,28 @@ collections {
            name: "shelf_complete";
            action: STATE_SET "default" 0.0;
                ORIENT_TARGETS
-           }
        }
+       program { name: "spin";
+           signal: "spin,show"; source: "e";
+           action: STATE_SET "show" 0.0;
+           transition: LINEAR 1.0;
+           target: "knob_spinner";
+           target: "knob";
+           after: "spin2";
+       }
+       program { name: "spin2";
+           action: STATE_SET "spin" 0.0;
+           target: "knob_spinner";
+           after: "spin";
+       }
+       program { name: "hide";
+           signal: "spin,hide"; source: "e";
+           action: STATE_SET "default" 0.0;
+           transition: LINEAR 1.0;
+           target: "knob";
+           target: "knob_spinner";
+       }
+     }
    }
 
    FORECASTS_ICON(  0, 10, 10, 110, 110, 1.0)
