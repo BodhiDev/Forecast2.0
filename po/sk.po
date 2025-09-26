@@ -69,23 +69,20 @@ msgid "Weather location"
 msgstr "Miesto predpovede"
 
 #: src/e_mod_config.c:127
-#, fuzzy
 msgid "City name (empty = local)"
-msgstr "Miesto (prázdne = lokálne) "
+msgstr "Miesto (prázdne = lokálne)"
 
 #: src/e_mod_config.c:133
-#, fuzzy
 msgid "Custom location label"
-msgstr "Voliteľný názov miesta "
+msgstr "Voliteľný názov miesta"
 
 #: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Jazyková podpora"
 
 #: src/e_mod_config.c:143
-#, fuzzy
 msgid "Language code (e.g. sk)"
-msgstr "Kód jazyka (napr. sk)    "
+msgstr "Kód jazyka (napr. sk)"
 
 #: src/e_mod_main.c:168
 msgid "Forecasts"
@@ -102,7 +99,7 @@ msgstr "%s: Aktuálne počasie"
 
 #: src/e_mod_main.c:775
 msgid "Updated:"
-msgstr ""
+msgstr "Aktualizované:"
 
 #: src/e_mod_main.c:790
 msgid "Feels Like:"
@@ -133,9 +130,8 @@ msgid "Pressure:"
 msgstr "Tlak:"
 
 #: src/e_mod_main.c:835
-#, fuzzy
 msgid "Sunrise / Sunset:"
-msgstr "Východ/Západ slnka: "
+msgstr "Východ/Západ slnka:"
 
 #: src/e_mod_main.c:862
 msgid "Today"
