@@ -491,7 +491,7 @@ _cb_fc_check(void *data)
              lang_buf, inst->ci->host, forecast);
    free(temp);
 
-   edje_object_signal_emit(inst->forecasts_obj, "spin,show", "e");
+   edje_object_signal_emit(inst->forecasts_obj, "download,show", "e");
    url_con = ecore_con_url_new(url);
    if (!url_con) WRN("error when creating ecore con url object.\n");
    
@@ -505,7 +505,7 @@ _cb_fc_check(void *data)
 
    free_url_con:
    ecore_con_url_free(url_con);
-   edje_object_signal_emit(inst->forecasts_obj, "spin,hide", "e");
+   edje_object_signal_emit(inst->forecasts_obj, "download,hide", "e");
    return ECORE_CALLBACK_RENEW;
 }
 
@@ -543,7 +543,7 @@ _cb_url_complete(void *data, int type __UNUSED__, void *event)
      {
        _fc_converter(inst);
        _fc_display_set(inst, ret);
-       edje_object_signal_emit(inst->forecasts_obj, "spin,hide", "e");
+       edje_object_signal_emit(inst->forecasts_obj, "download,hide", "e");
      }
    eina_binbuf_reset(inst->buffer);
 

@@ -711,14 +711,14 @@ collections {
            action: STATE_SET "default" 0.0;
                ORIENT_TARGETS
        }
-       program { name: "spin";
-           signal: "spin,show"; source: "e";
+       program { name: "download_show";
+           signal: "download,show"; source: "e";
            action: STATE_SET "show" 0.0;
            transition: LINEAR 1.0;
            target: "download";
        }
-       program { name: "hide";
-           signal: "spin,hide"; source: "e";
+       program { name: "download_hide";
+           signal: "download,hide"; source: "e";
            action: STATE_SET "default" 0.0;
            transition: LINEAR 1.0;
            target: "download";
