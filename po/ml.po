@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: forecast\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-28 09:46-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-26 16:13+0200\n"
 "PO-Revision-Date: 2025-02-24 20:46+0530\n"
 "Last-Translator: Indraneel Rajeevan <https://github.com/indraneel12>\n"
 "Language-Team: Malayalam\n"
@@ -68,11 +68,13 @@ msgid "Weather location"
 msgstr "കാലാവസ്ഥയുടെ സ്ഥാനം"
 
 #: src/e_mod_config.c:127
-msgid "City name (empty = local) "
+#, fuzzy
+msgid "City name (empty = local)"
 msgstr "നഗരത്തിന്റെ പേര് (ശൂന്യം = പ്രാദേശികം) "
 
 #: src/e_mod_config.c:133
-msgid "Custom location label "
+#, fuzzy
+msgid "Custom location label"
 msgstr "ഇഷ്‌ടാനുസൃത ലൊക്കേഷൻ ലേബൽ "
 
 #: src/e_mod_config.c:141
@@ -80,7 +82,8 @@ msgid "Language support"
 msgstr "ഭാഷാ പിന്തുണ"
 
 #: src/e_mod_config.c:143
-msgid "Language code (e.g. sk)    "
+#, fuzzy
+msgid "Language code (e.g. sk)"
 msgstr "ഭാഷാ കോഡ് (ഉദാ. ml)    "
 
 #: src/e_mod_main.c:168
@@ -91,55 +94,60 @@ msgstr "ഫോർക്കാസ്റ്റ്സ്"
 msgid "Settings"
 msgstr "ക്രമീകരണങ്ങൾ"
 
-#: src/e_mod_main.c:755 src/e_mod_main.c:757
+#: src/e_mod_main.c:770 src/e_mod_main.c:772
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: നിലവിലെ സാഹചര്യം"
 
-#: src/e_mod_main.c:771
+#: src/e_mod_main.c:775
+msgid "Updated:"
+msgstr ""
+
+#: src/e_mod_main.c:790
 msgid "Feels Like:"
 msgstr "ഇതുപോലെ തോന്നുന്നു:"
 
-#: src/e_mod_main.c:777
+#: src/e_mod_main.c:796
 msgid "Wind Chill:"
 msgstr "കാറ്റിൻ്റെ തണുപ്പ്:"
 
-#: src/e_mod_main.c:783
+#: src/e_mod_main.c:802
 msgid "Wind Speed:"
 msgstr "കാറ്റിൻ്റെ വേഗത:"
 
-#: src/e_mod_main.c:789
+#: src/e_mod_main.c:808
 msgid "Humidity:"
 msgstr "ഈർപ്പം:"
 
-#: src/e_mod_main.c:795
+#: src/e_mod_main.c:814
 msgid "Precipitation:"
 msgstr "മഴ:"
 
-#: src/e_mod_main.c:801
+#: src/e_mod_main.c:820
 msgid "Visibility:"
 msgstr "ദൃശ്യപരത:"
 
-#: src/e_mod_main.c:807
+#: src/e_mod_main.c:826
 msgid "Pressure:"
 msgstr "സമ്മർദ്ദം:"
 
-#: src/e_mod_main.c:816
-msgid "Sunrise / Sunset: "
+#: src/e_mod_main.c:835
+#, fuzzy
+msgid "Sunrise / Sunset:"
 msgstr "സൂര്യോദയം / സൂര്യാസ്തമയം: "
 
-#: src/e_mod_main.c:843
+#: src/e_mod_main.c:862
 msgid "Today"
 msgstr "ഇന്ന്"
 
-#: src/e_mod_main.c:845
+#: src/e_mod_main.c:864
 msgid "Tomorrow"
 msgstr "നാളെ"
 
-#: src/e_mod_main.c:854
+#: src/e_mod_main.c:873
 msgid "High"
 msgstr "ഉയർന്നത്"
 
-#: src/e_mod_main.c:865
+#: src/e_mod_main.c:884
 msgid "Low"
 msgstr "താഴ്ന്നത്"

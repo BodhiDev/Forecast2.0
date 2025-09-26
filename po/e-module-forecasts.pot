@@ -1,105 +1,99 @@
-# French translation for the Forecasts module.
+# SOME DESCRIPTIVE TITLE.
 # This file is put in the public domain.
-# 
-# batden <batden@orange.fr>, 2009, 2010.
-# 
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: forecast\n"
+"Project-Id-Version: e-module-forecasts\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-26 16:13+0200\n"
-"PO-Revision-Date: 2020-07-09 08:37+0200\n"
-"Last-Translator: Philippe Jean Guillaumie <similar@orange.fr>\n"
-"Language-Team: FrenchLanguage: fr\n"
-"Language: fr\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n>1;\n"
-"X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.6\n"
 
 #: src/e_mod_config.c:46
 msgid "Forecasts Settings"
-msgstr "Paramétrage des prévisions"
+msgstr ""
 
 #: src/e_mod_config.c:100
 msgid "Display Settings"
-msgstr "Paramètres d'affichage"
+msgstr ""
 
 #: src/e_mod_config.c:101
 msgid "Poll Time"
-msgstr "Fréquence d'actualisation"
+msgstr ""
 
 #: src/e_mod_config.c:103
 #, c-format
 msgid "%2.0f minutes"
-msgstr "%2.0f minutes"
+msgstr ""
 
 #: src/e_mod_config.c:106
 msgid "Forecasts days"
-msgstr "Prévisions sur"
+msgstr ""
 
 #: src/e_mod_config.c:108
 #, c-format
 msgid "%2.0f days"
-msgstr "%2.0f jours"
+msgstr ""
 
 #: src/e_mod_config.c:111
 msgid "Show Description"
-msgstr "Afficher la description"
+msgstr ""
 
 #: src/e_mod_config.c:113
 msgid "Popup on mouse over"
-msgstr "Pop-up au survol de la souris"
+msgstr ""
 
 #: src/e_mod_config.c:117
 msgid "Unit Settings"
-msgstr "Système de mesure"
+msgstr ""
 
 #: src/e_mod_config.c:119
 msgid "Metric"
-msgstr "Métrique"
+msgstr ""
 
 #: src/e_mod_config.c:121
 msgid "English"
-msgstr "Anglais"
+msgstr ""
 
 #: src/e_mod_config.c:125
 msgid "Weather location"
-msgstr "Emplacement"
+msgstr ""
 
 #: src/e_mod_config.c:127
-#, fuzzy
 msgid "City name (empty = local)"
-msgstr "Nom de la ville (vide = local) "
+msgstr ""
 
 #: src/e_mod_config.c:133
-#, fuzzy
 msgid "Custom location label"
-msgstr "Étiquette d'emplacement personnalisée "
+msgstr ""
 
 #: src/e_mod_config.c:141
 msgid "Language support"
-msgstr "Support linguistique"
+msgstr ""
 
 #: src/e_mod_config.c:143
-#, fuzzy
 msgid "Language code (e.g. sk)"
-msgstr "Code langue (p. ex. sk)    "
+msgstr ""
 
 #: src/e_mod_main.c:168
 msgid "Forecasts"
-msgstr "Prévisions"
+msgstr ""
 
 #: src/e_mod_main.c:210
 msgid "Settings"
-msgstr "Configuration"
+msgstr ""
 
 #: src/e_mod_main.c:770 src/e_mod_main.c:772
 #, c-format
 msgid "%s: Current Conditions"
-msgstr "%s : conditions actuelles"
+msgstr ""
 
 #: src/e_mod_main.c:775
 msgid "Updated:"
@@ -107,49 +101,48 @@ msgstr ""
 
 #: src/e_mod_main.c:790
 msgid "Feels Like:"
-msgstr "Temp. ressentie :"
+msgstr ""
 
 #: src/e_mod_main.c:796
 msgid "Wind Chill:"
-msgstr "Refroidissement éolien :"
+msgstr ""
 
 #: src/e_mod_main.c:802
 msgid "Wind Speed:"
-msgstr "Vitesse du vent :"
+msgstr ""
 
 #: src/e_mod_main.c:808
 msgid "Humidity:"
-msgstr "Humidité :"
+msgstr ""
 
 #: src/e_mod_main.c:814
 msgid "Precipitation:"
-msgstr "Précipitations :"
+msgstr ""
 
 #: src/e_mod_main.c:820
 msgid "Visibility:"
-msgstr "Visibilité :"
+msgstr ""
 
 #: src/e_mod_main.c:826
 msgid "Pressure:"
-msgstr "Pression :"
+msgstr ""
 
 #: src/e_mod_main.c:835
-#, fuzzy
 msgid "Sunrise / Sunset:"
-msgstr "Lever / Coucher : "
+msgstr ""
 
 #: src/e_mod_main.c:862
 msgid "Today"
-msgstr "Aujourd'hui"
+msgstr ""
 
 #: src/e_mod_main.c:864
 msgid "Tomorrow"
-msgstr "Demain"
+msgstr ""
 
 #: src/e_mod_main.c:873
 msgid "High"
-msgstr "Maximale"
+msgstr ""
 
 #: src/e_mod_main.c:884
 msgid "Low"
-msgstr "Minimale"
+msgstr ""

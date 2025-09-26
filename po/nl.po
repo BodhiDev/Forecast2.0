@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: forecast\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-28 09:46-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-26 16:13+0200\n"
 "PO-Revision-Date: 2011-09-04 16:01+0100\n"
 "Last-Translator: Pjotr <pjotrvertaalt@gmail.com>\n"
 "Language-Team: Dutch\n"
@@ -68,11 +68,13 @@ msgid "Weather location"
 msgstr "Weerlocatie"
 
 #: src/e_mod_config.c:127
-msgid "City name (empty = local) "
+#, fuzzy
+msgid "City name (empty = local)"
 msgstr "Stadsnaam (leeg = plaatselijk)"
 
 #: src/e_mod_config.c:133
-msgid "Custom location label "
+#, fuzzy
+msgid "Custom location label"
 msgstr "Aangepast locatie-etiket"
 
 #: src/e_mod_config.c:141
@@ -80,7 +82,8 @@ msgid "Language support"
 msgstr "Taalondersteuning"
 
 #: src/e_mod_config.c:143
-msgid "Language code (e.g. sk)    "
+#, fuzzy
+msgid "Language code (e.g. sk)"
 msgstr "Taalcode (bijv. nl)"
 
 #: src/e_mod_main.c:168
@@ -91,55 +94,60 @@ msgstr "Weersvoorspellingen"
 msgid "Settings"
 msgstr "Instellingen"
 
-#: src/e_mod_main.c:755 src/e_mod_main.c:757
+#: src/e_mod_main.c:770 src/e_mod_main.c:772
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: Huidige omstandigheden"
 
-#: src/e_mod_main.c:771
+#: src/e_mod_main.c:775
+msgid "Updated:"
+msgstr ""
+
+#: src/e_mod_main.c:790
 msgid "Feels Like:"
 msgstr "Voelt aan als:"
 
-#: src/e_mod_main.c:777
+#: src/e_mod_main.c:796
 msgid "Wind Chill:"
 msgstr "Gevoelstemperatuur:"
 
-#: src/e_mod_main.c:783
+#: src/e_mod_main.c:802
 msgid "Wind Speed:"
 msgstr "Windsnelheid:"
 
-#: src/e_mod_main.c:789
+#: src/e_mod_main.c:808
 msgid "Humidity:"
 msgstr "Luchtvochtigheid:"
 
-#: src/e_mod_main.c:795
+#: src/e_mod_main.c:814
 msgid "Precipitation:"
 msgstr "Neerslag:"
 
-#: src/e_mod_main.c:801
+#: src/e_mod_main.c:820
 msgid "Visibility:"
 msgstr "Zichtbaarheid"
 
-#: src/e_mod_main.c:807
+#: src/e_mod_main.c:826
 msgid "Pressure:"
 msgstr "Luchtdruk:"
 
-#: src/e_mod_main.c:816
-msgid "Sunrise / Sunset: "
+#: src/e_mod_main.c:835
+#, fuzzy
+msgid "Sunrise / Sunset:"
 msgstr "Zonsopgang / Zonsondergang: "
 
-#: src/e_mod_main.c:843
+#: src/e_mod_main.c:862
 msgid "Today"
 msgstr "Vandaag"
 
-#: src/e_mod_main.c:845
+#: src/e_mod_main.c:864
 msgid "Tomorrow"
 msgstr "Morgen"
 
-#: src/e_mod_main.c:854
+#: src/e_mod_main.c:873
 msgid "High"
 msgstr "Hoog"
 
-#: src/e_mod_main.c:865
+#: src/e_mod_main.c:884
 msgid "Low"
 msgstr "Laag"

@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: forecast\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-28 09:46-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-26 16:13+0200\n"
 "PO-Revision-Date: 2025-02-15 20:00+0300\n"
 "Last-Translator: R0bur <robursw@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -39,6 +39,7 @@ msgid "Forecasts days"
 msgstr "Дни прогноза"
 
 #: src/e_mod_config.c:108
+#, c-format
 msgid "%2.0f days"
 msgstr "%2.0f дней"
 
@@ -67,11 +68,13 @@ msgid "Weather location"
 msgstr "Погода в регионе"
 
 #: src/e_mod_config.c:127
-msgid "City name (empty = local) "
+#, fuzzy
+msgid "City name (empty = local)"
 msgstr "Город (пусто = местная) "
 
 #: src/e_mod_config.c:133
-msgid "Custom location label "
+#, fuzzy
+msgid "Custom location label"
 msgstr "Описание местоположения "
 
 #: src/e_mod_config.c:141
@@ -79,7 +82,8 @@ msgid "Language support"
 msgstr "Языковая поддержка"
 
 #: src/e_mod_config.c:143
-msgid "Language code (e.g. sk)    "
+#, fuzzy
+msgid "Language code (e.g. sk)"
 msgstr "Код языка (например, ru)    "
 
 #: src/e_mod_main.c:168
@@ -90,55 +94,60 @@ msgstr "Сводка погоды"
 msgid "Settings"
 msgstr "Настройки"
 
-#: src/e_mod_main.c:755 src/e_mod_main.c:757
+#: src/e_mod_main.c:770 src/e_mod_main.c:772
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: на данный момент"
 
-#: src/e_mod_main.c:771
+#: src/e_mod_main.c:775
+msgid "Updated:"
+msgstr ""
+
+#: src/e_mod_main.c:790
 msgid "Feels Like:"
 msgstr "Ощущается как:"
 
-#: src/e_mod_main.c:777
+#: src/e_mod_main.c:796
 msgid "Wind Chill:"
 msgstr "Температура ветра:"
 
-#: src/e_mod_main.c:783
+#: src/e_mod_main.c:802
 msgid "Wind Speed:"
 msgstr "Скорость ветра:"
 
-#: src/e_mod_main.c:789
+#: src/e_mod_main.c:808
 msgid "Humidity:"
 msgstr "Влажность:"
 
-#: src/e_mod_main.c:795
+#: src/e_mod_main.c:814
 msgid "Precipitation:"
 msgstr "Осадки:"
 
-#: src/e_mod_main.c:801
+#: src/e_mod_main.c:820
 msgid "Visibility:"
 msgstr "Видимость:"
 
-#: src/e_mod_main.c:807
+#: src/e_mod_main.c:826
 msgid "Pressure:"
 msgstr "Давление:"
 
-#: src/e_mod_main.c:816
-msgid "Sunrise / Sunset: "
+#: src/e_mod_main.c:835
+#, fuzzy
+msgid "Sunrise / Sunset:"
 msgstr "Восход / Закат:"
 
-#: src/e_mod_main.c:843
+#: src/e_mod_main.c:862
 msgid "Today"
 msgstr "Сегодня"
 
-#: src/e_mod_main.c:845
+#: src/e_mod_main.c:864
 msgid "Tomorrow"
 msgstr "Завтра"
 
-#: src/e_mod_main.c:854
+#: src/e_mod_main.c:873
 msgid "High"
 msgstr "Максимум"
 
-#: src/e_mod_main.c:865
+#: src/e_mod_main.c:884
 msgid "Low"
 msgstr "Минимум"

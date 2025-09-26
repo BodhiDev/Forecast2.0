@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: forecast\n"
-"Report-Msgid-Bugs-To: moksha@bodhilinux.com\n"
-"POT-Creation-Date: 2025-01-28 09:46-0500\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-26 16:13+0200\n"
 "PO-Revision-Date: 2025-02-06 00:30+0100\n"
 "Last-Translator: diekrz2\n"
 "Language-Team: none\n"
@@ -69,11 +69,13 @@ msgid "Weather location"
 msgstr "Lokalizacja pogody"
 
 #: src/e_mod_config.c:127
-msgid "City name (empty = local) "
+#, fuzzy
+msgid "City name (empty = local)"
 msgstr "Nazwa miasta (puste = localne) "
 
 #: src/e_mod_config.c:133
-msgid "Custom location label "
+#, fuzzy
+msgid "Custom location label"
 msgstr "Niestandardowe ustawienie lokalizacji "
 
 #: src/e_mod_config.c:141
@@ -81,7 +83,8 @@ msgid "Language support"
 msgstr "Wsparcie językowe"
 
 #: src/e_mod_config.c:143
-msgid "Language code (e.g. sk)    "
+#, fuzzy
+msgid "Language code (e.g. sk)"
 msgstr "Kod języka (n.p pl)   "
 
 #: src/e_mod_main.c:168
@@ -92,55 +95,60 @@ msgstr "Prognozy"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: src/e_mod_main.c:755 src/e_mod_main.c:757
+#: src/e_mod_main.c:770 src/e_mod_main.c:772
 #, c-format
 msgid "%s: Current Conditions"
 msgstr "%s: Obecne warunki"
 
-#: src/e_mod_main.c:771
+#: src/e_mod_main.c:775
+msgid "Updated:"
+msgstr ""
+
+#: src/e_mod_main.c:790
 msgid "Feels Like:"
 msgstr "Odczuwalne:"
 
-#: src/e_mod_main.c:777
+#: src/e_mod_main.c:796
 msgid "Wind Chill:"
 msgstr "Chłód wiatru:"
 
-#: src/e_mod_main.c:783
+#: src/e_mod_main.c:802
 msgid "Wind Speed:"
 msgstr "Prędkość wiatru:"
 
-#: src/e_mod_main.c:789
+#: src/e_mod_main.c:808
 msgid "Humidity:"
 msgstr "Wilgotność:"
 
-#: src/e_mod_main.c:795
+#: src/e_mod_main.c:814
 msgid "Precipitation:"
 msgstr "Opady:"
 
-#: src/e_mod_main.c:801
+#: src/e_mod_main.c:820
 msgid "Visibility:"
 msgstr "Widoczność:"
 
-#: src/e_mod_main.c:807
+#: src/e_mod_main.c:826
 msgid "Pressure:"
 msgstr "Ciśnienie:"
 
-#: src/e_mod_main.c:816
-msgid "Sunrise / Sunset: "
+#: src/e_mod_main.c:835
+#, fuzzy
+msgid "Sunrise / Sunset:"
 msgstr "Wschód / Zachód słońca: "
 
-#: src/e_mod_main.c:843
+#: src/e_mod_main.c:862
 msgid "Today"
 msgstr "Dzisiaj"
 
-#: src/e_mod_main.c:845
+#: src/e_mod_main.c:864
 msgid "Tomorrow"
 msgstr "Jutro"
 
-#: src/e_mod_main.c:854
+#: src/e_mod_main.c:873
 msgid "High"
 msgstr "Maksymalna"
 
-#: src/e_mod_main.c:865
+#: src/e_mod_main.c:884
 msgid "Low"
 msgstr "Minimalna"
