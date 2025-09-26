@@ -486,7 +486,7 @@ _cb_fc_check(void *data)
    temp = url_normalize_str(inst->ci->code);
 
    if ((inst->ci->lang[0]) != '\0') snprintf(lang_buf, 256, "%s.", inst->ci->lang);
-   snprintf(forecast, sizeof(forecast), "%s?format=j1&random=$RANDOM", temp);
+   snprintf(forecast, sizeof(forecast), "%s?format=j1&nonce=$1", temp);
    snprintf(url, sizeof(url), "http://%s%s/%s",
              lang_buf, inst->ci->host, forecast);
    free(temp);
