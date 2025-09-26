@@ -1,6 +1,6 @@
-# Portuguese translation for the Forecasts module.
+# Portuguese translation for the Forecast2.0 module.
 # This file is put in the public domain.
-#
+# Translations:
 # Sérgio Marques <smarquespt@gmail.com>, 2010.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2021-2025.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: forecast\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-09-26 16:13+0200\n"
-"PO-Revision-Date: 2025-02-12 23:22+0000\n"
+"PO-Revision-Date: 2025-09-26 18:39+0100\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <hugokarvalho@hotmail.com>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
 #: src/e_mod_config.c:46
 msgid "Forecasts Settings"
@@ -70,23 +70,20 @@ msgid "Weather location"
 msgstr "Localização meteorológica"
 
 #: src/e_mod_config.c:127
-#, fuzzy
 msgid "City name (empty = local)"
-msgstr "Nome da cidade (vazio = local) "
+msgstr "Nome da cidade (vazio = local)"
 
 #: src/e_mod_config.c:133
-#, fuzzy
 msgid "Custom location label"
-msgstr "Etiqueta de localização personalizada "
+msgstr "Etiqueta de localização personalizada"
 
 #: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Suporte de idioma"
 
 #: src/e_mod_config.c:143
-#, fuzzy
 msgid "Language code (e.g. sk)"
-msgstr "Código de idioma (por ex: pt)    "
+msgstr "Código do idioma (p. ex. pt)"
 
 #: src/e_mod_main.c:168
 msgid "Forecasts"
@@ -103,7 +100,7 @@ msgstr "%s: condições atuais"
 
 #: src/e_mod_main.c:775
 msgid "Updated:"
-msgstr ""
+msgstr "Atualizado:"
 
 #: src/e_mod_main.c:790
 msgid "Feels Like:"
@@ -134,9 +131,8 @@ msgid "Pressure:"
 msgstr "Pressão:"
 
 #: src/e_mod_main.c:835
-#, fuzzy
 msgid "Sunrise / Sunset:"
-msgstr "Nascer do sol / Pôr do sol: "
+msgstr "Nascer do sol / Pôr do sol:"
 
 #: src/e_mod_main.c:862
 msgid "Today"
