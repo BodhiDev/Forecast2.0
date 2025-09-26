@@ -1,7 +1,7 @@
 # Slovakian translation for the Forecasts module.
 # This file is put in the public domain.
 #
-# Stefan Uram <thewaiter@centrum.sk>, 2009.
+# Štefan Uram <thewaiter@centrum.sk>, 2025.
 #
 msgid ""
 msgstr ""
