@@ -54,7 +54,7 @@ msgstr "Wyświetl po najechaniu myszką"
 
 #: src/e_mod_config.c:117
 msgid "Unit Settings"
-msgstr "Ustawienia jednostki miary"
+msgstr "Jednostka miary"
 
 #: src/e_mod_config.c:119
 msgid "Metric"
@@ -66,24 +66,21 @@ msgstr "Angielskie"
 
 #: src/e_mod_config.c:125
 msgid "Weather location"
-msgstr "Lokalizacja pogody"
+msgstr "Lokalizacja"
 
 #: src/e_mod_config.c:127
-#, fuzzy
 msgid "City name (empty = local)"
 msgstr "Nazwa miasta (puste = localne) "
 
 #: src/e_mod_config.c:133
-#, fuzzy
 msgid "Custom location label"
-msgstr "Niestandardowe ustawienie lokalizacji "
+msgstr "Etykieta lokalizacji własnej "
 
 #: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Wsparcie językowe"
 
 #: src/e_mod_config.c:143
-#, fuzzy
 msgid "Language code (e.g. sk)"
 msgstr "Kod języka (n.p pl)   "
 
@@ -102,7 +99,7 @@ msgstr "%s: Obecne warunki"
 
 #: src/e_mod_main.c:775
 msgid "Updated:"
-msgstr ""
+msgstr "Zaktualizowano:"
 
 #: src/e_mod_main.c:790
 msgid "Feels Like:"
@@ -133,7 +130,6 @@ msgid "Pressure:"
 msgstr "Ciśnienie:"
 
 #: src/e_mod_main.c:835
-#, fuzzy
 msgid "Sunrise / Sunset:"
 msgstr "Wschód / Zachód słońca: "
 
