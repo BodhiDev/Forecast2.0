@@ -52,7 +52,7 @@ msgstr "Popup al passaggio del mouse"
 
 #: src/e_mod_config.c:117
 msgid "Unit Settings"
-msgstr "Impostazione unità di misura"
+msgstr "Unità di misura"
 
 #: src/e_mod_config.c:119
 msgid "Metric"
@@ -67,21 +67,18 @@ msgid "Weather location"
 msgstr "Posizione"
 
 #: src/e_mod_config.c:127
-#, fuzzy
 msgid "City name (empty = local)"
-msgstr "Città (vuoto = locale)"
+msgstr "Nome città (vuoto = locale)"
 
 #: src/e_mod_config.c:133
-#, fuzzy
 msgid "Custom location label"
-msgstr "Posizione personalizzata "
+msgstr "Etichetta posizione personalizzata "
 
 #: src/e_mod_config.c:141
 msgid "Language support"
 msgstr "Supporto lingua"
 
 #: src/e_mod_config.c:143
-#, fuzzy
 msgid "Language code (e.g. sk)"
 msgstr "Codice lingua (es. it)   "
 
@@ -100,7 +97,7 @@ msgstr "%s: Condizioni attuali"
 
 #: src/e_mod_main.c:775
 msgid "Updated:"
-msgstr ""
+msgstr "Aggiornato:"
 
 #: src/e_mod_main.c:790
 msgid "Feels Like:"
@@ -131,7 +128,6 @@ msgid "Pressure:"
 msgstr "Pressione:"
 
 #: src/e_mod_main.c:835
-#, fuzzy
 msgid "Sunrise / Sunset:"
 msgstr "Alba / Tramonto: "
 
