@@ -70,11 +70,11 @@ msgstr "Lokalizacja"
 
 #: src/e_mod_config.c:127
 msgid "City name (empty = local)"
-msgstr "Nazwa miasta (puste = localne) "
+msgstr "Nazwa miasta (puste = localne)"
 
 #: src/e_mod_config.c:133
 msgid "Custom location label"
-msgstr "Etykieta lokalizacji własnej "
+msgstr "Etykieta lokalizacji własnej"
 
 #: src/e_mod_config.c:141
 msgid "Language support"
@@ -82,7 +82,7 @@ msgstr "Wsparcie językowe"
 
 #: src/e_mod_config.c:143
 msgid "Language code (e.g. sk)"
-msgstr "Kod języka (n.p pl)   "
+msgstr "Kod języka (n.p pl)"
 
 #: src/e_mod_main.c:168
 msgid "Forecasts"
@@ -131,7 +131,7 @@ msgstr "Ciśnienie:"
 
 #: src/e_mod_main.c:835
 msgid "Sunrise / Sunset:"
-msgstr "Wschód / Zachód słońca: "
+msgstr "Wschód / Zachód słońca:"
 
 #: src/e_mod_main.c:862
 msgid "Today"
