@@ -37,7 +37,6 @@ fc_parse_json(void *data)
    Eina_Bool have_lang =  (inst->ci->lang[0] != '\0') && strcmp(inst->ci->lang, "en");
 
    needle = (char *) eina_binbuf_string_get(inst->buffer);
-   printf("%s", needle);
    if (needle[0] == '\0') return EINA_FALSE;
 
    root = json_tokener_parse(needle);
