@@ -487,7 +487,7 @@ _cb_fc_check(void *data)
 
    if ((inst->ci->lang[0]) != '\0') snprintf(lang_buf, 256, "%s.", inst->ci->lang);
    snprintf(forecast, sizeof(forecast), "%s?format=j1", temp);
-   snprintf(url, sizeof(url), "http://%s%s/%s",
+   snprintf(url, sizeof(url), "https://%s%s/%s",
              lang_buf, inst->ci->host, forecast);
    free(temp);
 
@@ -772,9 +772,9 @@ _fc_popup_content_create(Instance *inst)
      snprintf(buf, sizeof(buf), D_("%s: Current Conditions"), inst->label);
    of = e_widget_frametable_add(evas, buf, 0);
 
-   snprintf(buf, sizeof(buf), "%s %s", D_("Updated:"), inst->update_at);
-   ob = e_widget_label_add(evas, buf);
-   e_widget_frametable_object_append(of, ob, 0, row, 1, 1, 1, 0, 0, 0);
+   //~ snprintf(buf, sizeof(buf), "%s %s", D_("Updated:"), inst->update_at);
+   //~ ob = e_widget_label_add(evas, buf);
+   //~ e_widget_frametable_object_append(of, ob, 0, row, 1, 1, 1, 0, 0, 0);
 
    snprintf(buf, sizeof(buf), "%s: %d °%c", inst->condition.desc, inst->condition.temp, inst->units.temp);
    ob = e_widget_label_add(evas, buf);

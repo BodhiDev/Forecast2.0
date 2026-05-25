@@ -37,6 +37,7 @@ fc_parse_json(void *data)
    Eina_Bool have_lang =  (inst->ci->lang[0] != '\0') && strcmp(inst->ci->lang, "en");
 
    needle = (char *) eina_binbuf_string_get(inst->buffer);
+   printf("%s", needle);
    if (needle[0] == '\0') return EINA_FALSE;
 
    root = json_tokener_parse(needle);
@@ -61,11 +62,11 @@ fc_parse_json(void *data)
    inst->details.wind.speed_km = JSON_ATOI(main, "windspeedKmph");
    inst->details.wind.speed_mi = JSON_ATOI(main, "windspeedMiles");
 
-   json_object *o_updated = json_object_object_get(main, "localObsDateTime");
-   if (!o_updated) goto error;
-   const char *timestamp = json_object_get_string(o_updated);
-   if (!timestamp) goto error;
-   eina_stringshare_replace(&inst->update_at, timestamp);
+   //~ json_object *o_updated = json_object_object_get(main, "localObsDateTime");
+   //~ if (!o_updated) goto error;
+   //~ const char *timestamp = json_object_get_string(o_updated);
+   //~ if (!timestamp) goto error;
+   //~ eina_stringshare_replace(&inst->update_at, timestamp);
 
    if (have_lang)
     {
