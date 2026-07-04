@@ -6,7 +6,7 @@
 #define GOLDEN_RATIO 1.618033989
 #define DEFAULT_CITY ""
 #define DEFAULT_LANG e_intl_language_get()
-#define TIMER_DELAY 2.0
+#define TIMER_DELAY 4.0
 
 
 EINTERN int _e_forecast_log_dom = -1;
